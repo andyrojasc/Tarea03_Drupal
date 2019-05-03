@@ -1,0 +1,62 @@
+uuid: c17c032c-4498-4bf7-9582-24a8873c6403
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.libro.field_autor
+    - field.field.node.libro.field_categoria
+    - field.field.node.libro.field_descripcion
+    - field.field.node.libro.field_titulo
+    - node.type.libro
+  module:
+    - text
+id: node.libro.default
+targetEntityType: node
+bundle: libro
+mode: default
+content:
+  field_autor:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_categoria:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_descripcion:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titulo:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

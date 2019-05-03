@@ -1,0 +1,26 @@
+uuid: 3e2c1555-8954-454b-9eff-819844dbbf8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.libro.field_autor
+    - field.field.node.libro.field_categoria
+    - field.field.node.libro.field_titulo
+    - node.type.libro
+  module:
+    - user
+id: node.libro.teaser
+targetEntityType: node
+bundle: libro
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_autor: true
+  field_categoria: true
+  field_titulo: true
