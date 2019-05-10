@@ -3,12 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.images_browser
     - field.field.node.libro.field_autor
     - field.field.node.libro.field_categoria
     - field.field.node.libro.field_descripcion
+    - field.field.node.libro.field_media_imagen
     - field.field.node.libro.field_titulo
     - node.type.libro
   module:
+    - entity_browser
     - text
 id: node.libro.default
 targetEntityType: node
@@ -36,6 +39,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_media_imagen:
+    weight: 27
+    settings:
+      entity_browser: images_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+      field_widget_display_settings: {  }
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
     region: content
   field_titulo:
     type: string_textfield

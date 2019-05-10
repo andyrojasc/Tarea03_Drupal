@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.libro.field_autor
     - field.field.node.libro.field_categoria
     - field.field.node.libro.field_descripcion
+    - field.field.node.libro.field_media_imagen
     - field.field.node.libro.field_titulo
     - node.type.libro
   module:
@@ -38,6 +39,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_media_imagen:
+    type: entity_reference_entity_view
+    weight: 107
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
     region: content
   field_titulo:
     weight: 104

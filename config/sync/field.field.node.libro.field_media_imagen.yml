@@ -1,0 +1,28 @@
+uuid: f4842de9-3cd3-4e89-9f6b-a306e82c192d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_imagen
+    - media.type.image
+    - node.type.libro
+id: node.libro.field_media_imagen
+field_name: field_media_imagen
+entity_type: node
+bundle: libro
+label: 'Media Imagen'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
